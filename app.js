@@ -18,7 +18,7 @@
 //             } else if (student.percent >= 70 && student.percent < 85) {
 //                 return {...student, grade: 4 };
 //             } else {
-//                 return {...student, grad: 5 };
+//                 return {...student, grade: 5 };
 //             }
 //         })
 //         .filter((student) => student.grade == grade)
@@ -178,13 +178,18 @@
 // console.log(result);
 
 // 16 misol
-// function isWords(text) {
-//     return text.split(" ").every((word) => word);
-// }
-// let result1 = isWords("JavaScript");
-// let result2 = isWords("JavaScript123");
-// console.log(result1);
-// console.log(result2);
+// const text = "asdjhaksdh asjdkajsd aksjdskdj kjksjd";
+// const result = text
+//     .split(" ")
+//     .join("")
+//     .split("")
+//     .every((el) => {
+//         const string = new String(el).charCodeAt();
+//         if ((string >= 65 && string <= 90) || (string >= 97 && string <= 122)) {
+//             return true;
+//         }
+//     });
+// console.log(result);
 
 // 17 misol
 // const text = [false, 1, 10, "", null, "abdulaziz", 1.13, 0];
@@ -203,3 +208,97 @@
 // console.log(result);
 
 // 19 misol
+// const text = "Men Abdulaziz Programmerman";
+// const result = text.split("").some((el) => el === " ");
+// console.log(result);
+
+// 20 misol
+// const obj = { a: 2, b: 5, c: 7 };
+// const result = Object.entries(obj).map((abc) => {
+//     return abc.join("");
+// });
+// console.log(result);
+
+// 21 misol
+// let son = 10;
+// let counter = 0;
+
+// function calc() {
+//     counter += son;
+//     son--;
+//     if (0 < son) {
+//         calc();
+//     }
+// }
+// calc();
+// console.log(counter);
+
+let pupils = [{
+        name: "Elbek",
+        protcent: 95,
+    },
+    {
+        name: "Zafar",
+        protcent: 78,
+    },
+    {
+        name: "Aziz",
+        protcent: 83,
+    },
+    {
+        name: "Jasur",
+        protcent: 88,
+    },
+    {
+        name: "Bobur",
+        protcent: 66,
+    },
+    {
+        name: "Kamron",
+        protcent: 75,
+    },
+];
+
+// 22 misol
+// function averagePercent(pupils) {
+//     let totalPercent = pupils.reduce((sum, pupil) => sum + pupil.protcent, 0);
+//     return totalPercent / pupils.length;
+// }
+
+// let avgPercent = averagePercent(pupils);
+
+// console.log(avgPercent);
+
+// 23 misol
+// function getNamesByGrade(pupils, grade) {
+//     return pupils.map((pupil) => {
+//         if (pupil.protcent > 60 && pupil.protcent < 70) {
+//             return {...pupil, grade: 3 };
+//         } else if (pupil.protcent >= 70 && pupil.protcent < 85) {
+//             return {...pupil, grade: 4 };
+//         } else {
+//             return {...pupil, grade: 5 };
+//         }
+//     });
+// }
+// const result = getNamesByGrade(pupils);
+// console.log(result);
+
+// 24 misol
+// 25 misol
+// const result = pupils
+//     .map((pupil) => {
+//         return {...pupil, isPassed: pupil.protcent > 70 };
+//     })
+//     .reduce(
+//         (acc, curVal) => {
+//             curVal.isPassed ?
+//                 (acc.passed = acc.passed + 1) :
+//                 (acc.failed = acc.failed + 1);
+//             return acc;
+//         }, {
+//             passed: 0,
+//             failed: 0,
+//         }
+//     );
+// console.log(result);
